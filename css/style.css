@@ -109,6 +109,12 @@ body {
     transform: translateX(50px);
   }
 }
+@media (max-width: 767px) {
+  .navbar-nav button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 .navbar-nav button svg {
   margin-right: 5px;
 }

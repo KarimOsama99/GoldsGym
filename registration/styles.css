@@ -15,7 +15,10 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #444;
+    background: url(../imgs/dumbbells-floor-gym-ai-generative.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .main-btn {
   background-color: transparent;
@@ -52,6 +55,7 @@ body {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
+
 .container::before {
     content: "";
     position: absolute;
@@ -104,7 +108,7 @@ form.sign-up-form {
     height: 50px;
     background: #f0f0f0;
     margin: 10px 0;
-    border: 2px solid var(--gold);
+    border: 1px solid var(--gold);
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -282,5 +286,32 @@ a {
 @media (max-width:320px) {
     form {
         width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home a {
+        color: var(--section);
+    }
+    .container {
+        background: linear-gradient(-45deg, #0F2027, #203A43, #2C5364);
+        border-radius: 0;
+    }
+    .dark {
+        color: var(--section);
+    }
+    .social-text {color: var(--section); margin-bottom: 10px;}
+    .social-media a {color: var(--section); border-color: var(--section);}
+    .account-text {color: var(--section);}
+    .account-text a {
+        color: var(--gold);
+    }
+
+    .input-field, .input-field input, .input-field i {
+        background-color: transparent;
+        color: var(--section) !important;
+    }
+    .input-field input::placeholder {
+        color: var(--section) !important;
     }
 }
