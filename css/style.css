@@ -1,0 +1,539 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #232526;
+  --gold: #FFDD00;
+  --red: #ff3150;
+  --section: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid var(--gold);
+}
+.main-btn:hover {
+    color: var(--dark);
+}
+.main-btn.hvr-sweep-to-right::before {
+  background-color: var(--gold);
+}
+.main-btn.hvr-sweep-to-left::before {
+  background-color: var(--gold);
+}
+
+.main-title svg {
+  color: var(--gold);
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--gold);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gold {
+  color: var(--gold) !important;
+}
+
+/* Start NavBar */
+
+.navbar {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.85)),url(../imgs/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg) !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link,
+.navbar-brand {
+  color: white;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active,
+.navbar-expand-lg .navbar-nav .nav-link:focus,
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: var(--gold);
+}
+
+.search {
+  border-left: 1px solid var(--green);
+  color: var(--green);
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  color: white;
+  font-size: 22px;
+  border-color: white;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-brand img {
+  width: 50px;
+  margin-right: 6px;
+}
+.navbar-brand span {
+    color: var(--gold);
+}
+.nav-item {
+  margin-left: 25px;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: transparent;
+}
+.dropdown-menu li:hover {
+    padding-left: 3px;
+    background-color: var(--gold);
+    transition: all .3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav button {
+    transform: translateX(50px);
+  }
+}
+.navbar-nav button svg {
+  margin-right: 5px;
+}
+/* End NavBar */
+
+/* Hero */
+
+.hero {
+  height: calc(100vh - 90px);
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url(../imgs/young-fitness-man-studio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+@media (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../imgs/young-fitness-man-studio.jpg);
+  }
+  .navbar-nav .dropdown-menu {
+    margin-bottom: 10px;
+  }
+}
+.hero h1 {
+    font-size: 62px;
+    font-weight: bold;
+}
+.hero .p1 {
+  color: var(--gold);
+  font-size: 32px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    font-weight: 600;
+}
+.hero a:nth-of-type(2) {
+  margin-left: 15px;
+}
+.hero .social {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .hero .social {
+    justify-content: center;
+  }
+}
+@media (min-width:768px) and (max-width: 992px) {
+  .hero button:nth-of-type(2) {
+    margin-left: 0;
+  }
+}
+
+.hero .social li {
+  margin-top: 25px;
+}
+.hero .social li:not(.firstt) {
+    margin-left: 30px;
+}
+.hero .social li a {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+  background-color: transparent;
+}
+.hero .social li a:hover {
+    color: var(--gold);
+}
+
+.hero .scroll svg{
+    font-size: 18px;
+    font-weight: bold;
+    animation: moving 1.5s infinite ease-in-out;
+}
+@keyframes moving {
+    0% {
+        transform: translateY(-20px)
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.hero .scroll p {
+    font-weight: 450;
+    font-size: 18px;
+}
+/* End Hero */
+
+/* Standards */
+.standards {
+  background-color: var(--dark);
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: var(--gold);
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-title{
+	font-size: 18px;
+	color: var(--gold);
+	margin:6px 0 15px;
+  letter-spacing: 1px;
+}
+.timeline-content{
+  background-color: #2f363e;
+	padding: 30px;
+	border-radius: 5px;
+  text-align: left;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+
+/* End Standards */
+
+/* 3D */
+.g3d {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.85)),url(../imgs/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.g3d form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: var(--section);
+}
+.g3d form input, .g3d form select {
+  background-color: transparent;
+  color: var(--section) !important;
+  border-color: var(--gold);
+  margin-bottom: 20px;
+  width: 50% !important;
+}
+.g3d form select {
+  width: 30% !important;
+  border-color: var(--gold);
+  padding: 10px;
+  text-align: center;
+}
+.g3d form select option {
+  background-color: var(--dark);
+  color: var(--gold);
+  border-radius: 5px;
+}
+
+.g3d form input::placeholder {
+  color: var(--section);
+}
+.g3d form input:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow:none;
+}
+.g3d form button {
+  color: var(--section);
+  width: 20%;
+}
+@media (max-width: 767px) {
+    .g3d form input {
+        width: 90% !important;
+    }
+    .g3d form select {
+      width: 75% !important;
+    }
+    .g3d form button {
+        width: 50%;
+    }
+}
+/* End 3D */
+
+/* Contact Us */
+.contact {
+  background-color: var(--dark);
+}
+.contact ul svg {
+  color: var(--gold);
+}
+.contact .spans {
+    color: var(--section);
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.contact form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: var(--section);
+}
+.contact form input, .contact form textarea {
+    background-color: transparent;
+    border-color: var(--gold);
+    color: var(--section) !important;
+    margin-bottom: 10px;
+    width: 75% !important;
+}
+.contact form input:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow:none;
+}
+.contact textarea:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow:none;
+}
+.contact form input::placeholder {
+  color: var(--section);
+}
+.contact form textarea::placeholder {
+  color: var(--section);
+}
+.contact form button {
+    color: var(--section);
+    width: 35%;
+}
+@media (max-width: 767px) {
+    .contact form input, .contact form textarea {
+        width: 90% !important;
+    }
+    .contact form button {
+        width: 50%;
+    }
+}
+/* End Contact Us */
+
+/* Footer */
+.footer {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.85)),url(../imgs/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg) !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer .brand img{
+  width: 75px;
+  margin-right: 10px;
+}
+.footer .copyrights svg {
+  color: red;
+}
+.footer .copyrights a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer .copyrights a:hover {
+  text-decoration: underline;
+}
+/* End Footer */
+
+#btn-top {
+  background-color: black;
+  outline: none;
+  border: 1px solid var(--gold);
+  padding: 5px;
+  position: fixed;
+  z-index: 9;
+  right: 35px;
+  bottom: 35px;
+  width: 50px;
+  color: var(--gold);
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center !important;
+  display: none;
+}
+
+/* Start Careers */
+.careers {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url(../imgs/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg);
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+.careers img {
+  width: 100%;
+}
+.careers img::after {
+  content:'CAREERS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  width: 150px;
+  height: 100px;
+  background-color: var(--dark);
+  padding: 20px;
+  color: var(--section);
+}
+
+.careers h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.careers form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: var(--section);
+}
+.careers form input {
+  background-color: transparent;
+  color: var(--section) !important;
+  border-color: var(--gold);
+  margin-bottom: 20px;
+  width: 50% !important;
+}
+.careers form select {
+  background-color: transparent;
+  color: var(--section) !important;
+  margin-bottom: 20px;
+  border-color: var(--gold);
+  padding: 10px;
+  text-align: center;
+  width: 35%;
+}
+.careers form select option {
+  background-color: var(--dark);
+  color: var(--gold);
+  border-radius: 5px;
+}
+
+.careers form input::placeholder {
+  color: var(--section);
+}
+.careers form input:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow:none;
+}
+.careers form button {
+  color: var(--section);
+  width: 20%;
+}
+@media (max-width: 767px) {
+  .careers p {
+    text-align: left !important;
+  }
+    .careers form input {
+        width: 90% !important;
+    }
+    .careers form select {
+      width: 75%;
+    }
+    .careers form button {
+        width: 50%;
+    }
+}
+
+/* End Careers */
