@@ -522,7 +522,7 @@ body {
   width: 20%;
 }
 @media (max-width: 767px) {
-  .careers p {
+  .careers .topic {
     text-align: left !important;
   }
     .careers form input {
